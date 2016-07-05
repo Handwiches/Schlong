@@ -80,10 +80,12 @@
     <Compile Include="Assets\Script\Player\playerEvents.cs" />
     <Compile Include="Assets\Script\Player\playerMovement.cs" />
     <Compile Include="Assets\Script\Player\shaftPaddle.cs" />
+    <Compile Include="Assets\Script\cameraShake.cs" />
     <Compile Include="Assets\Script\gameManagerRelated\ballScript.cs" />
     <Compile Include="Assets\Script\gameManagerRelated\gameManager.cs" />
     <Compile Include="Assets\Script\gameManagerRelated\gameManagerEvents.cs" />
     <Compile Include="Assets\Script\gameManagerRelated\goal.cs" />
+    <Compile Include="Assets\Script\maintainParentRotation.cs" />
     <Compile Include="Assets\Script\pauseScript.cs" />
     <Compile Include="Assets\Script\scoreDisplay.cs" />
     <Compile Include="Assets\Sources\LightningBolt.cs" />

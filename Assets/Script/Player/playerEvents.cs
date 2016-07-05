@@ -33,25 +33,18 @@ public class playerEvents : MonoBehaviour {
 
         //Assign Random Particles
         int randomNo2 = 0;
-        int randomNo3 = 0;
         randomNo2 = Random.Range(0, smallParticles.Count);
-        randomNo3 = Random.Range(0, bigParticles.Count);
 
         cumParticleSmall = smallParticles[randomNo2];
         cumParticleBig = bigParticles[randomNo2];
 
     }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
-
     public void Goal()
     {
         //big cum
         float lookDirection = tipPosition.rotation.z;
-        Transform cumSmallClone = Instantiate(cumParticleBig, tipPosition.position, Quaternion.Euler(new Vector3(0, 0, lookDirection))) as Transform;
+        Transform cumSmallClone = Instantiate(cumParticleBig, tipPosition.position, Quaternion.Euler(new Vector3(-90, 0, lookDirection))) as Transform;
         cumSmallClone.parent = tipPosition; //so that the trail will follow the player
     }
 }

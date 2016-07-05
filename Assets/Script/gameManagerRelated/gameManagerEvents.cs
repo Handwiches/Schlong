@@ -5,12 +5,14 @@ using System.Collections.Generic; //allows using lists
 [RequireComponent(typeof(gameManager))]
 public class gameManagerEvents : MonoBehaviour {
 
+    //event scripts are audio/visual feedback scripts of their regular counterparts
 
     gameManager gameMan;
     public List<int> scoreCheck = new List<int>(new int[0]); //checks score difference, must be same size as in gameManager
 
     public List<Material> backgrounds = new List<Material>(new Material[2]);
     public MeshRenderer bgImage;
+    public cameraShake camShake;
     
     void Awake()
     {
@@ -41,5 +43,6 @@ public class gameManagerEvents : MonoBehaviour {
     public void Goal (int playerThatScored)
     {
         gameMan.playerInfo[playerThatScored].Goal();
+        camShake.Shake(0.25f);
     }
 }
