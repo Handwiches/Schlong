@@ -11,7 +11,7 @@ public class gameManager : MonoBehaviour {
     public List<int> scores = new List<int>(new int[2]); //characters preloaded into game
     public List<playerEvents> playerInfo = new List<playerEvents>(new playerEvents[2]);
     public int firstTo = 5;
-    bool gameEnded = false;
+    public bool gameEnded = false;
 
     public GameObject gameEndObject; //turns on at end of game
     public Text winningMessage;
@@ -20,7 +20,7 @@ public class gameManager : MonoBehaviour {
 
     void Awake()
     {
-        gmEvent.GetComponent<gameManagerEvents>();
+        gmEvent = transform.GetComponent<gameManagerEvents>();
         gameEndObject.SetActive(false);
         scores.Add(0); //player1
         scores.Add(0); //player2
@@ -34,14 +34,17 @@ public class gameManager : MonoBehaviour {
 	void Update () {
 	    if (scores[0] >= firstTo || scores[1] >= firstTo)
         {
-            EndGame();
-            gameEnded = true;
+            if (gameEnded == false)
+            {
+                EndGame();
+                gameEnded = true;
+                gmEvent.EndGame();
+            }
         }
 	}
 
     public void EndGame()
     {
-        gmEvent.EndGame();
         int winningPlayer = 0;
         int maxNumber = 0;
         for (int i = 0; i < scores.Count; i++)
