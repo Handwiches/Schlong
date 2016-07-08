@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{d4add3a7-e780-43ce-9c47-f41af44514f6}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>3.3199999999999998</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/CC0_LogoSound_01 {bd842359-1dd9-4595-b4c6-52c94b7ca9c5}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{316d25a0-cbf4-4ed9-af81-756e45d863db}</destination>
+        </relationship>
+    </object>
+</objects>

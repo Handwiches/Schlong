@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{b5b4e627-de7e-4c57-942e-443029007b45}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>67.662947845804993</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/CCA_PlaceholderMusic {53d6e1bc-8e04-4bf9-808e-4dc2cecd8a2d}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{316d25a0-cbf4-4ed9-af81-756e45d863db}</destination>
+        </relationship>
+    </object>
+</objects>

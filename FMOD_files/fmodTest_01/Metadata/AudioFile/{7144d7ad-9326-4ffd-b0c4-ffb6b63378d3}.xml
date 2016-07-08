@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{7144d7ad-9326-4ffd-b0c4-ffb6b63378d3}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.49922902494331067</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/CCA_ShaftWallHit {c742b49f-250d-4d6c-a218-903a79538422}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{316d25a0-cbf4-4ed9-af81-756e45d863db}</destination>
+        </relationship>
+    </object>
+</objects>
