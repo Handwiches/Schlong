@@ -15,14 +15,24 @@ public class shaftPaddle : MonoBehaviour {
     public playerEvents playerEvent;
     Transform tipPosition;
 
+    //AUDIO
+    [FMODUnity.EventRef]
+    public string wallShaftSound = "event:/Hits/ShaftWallHit";
+    FMOD.Studio.EventInstance wallHit; //eventInstance
+
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
+
         if (playerEvent != null)
         {
             tipPosition = playerEvent.tipPosition;
             rBody = transform.GetComponent<Rigidbody2D>();
             originalZRotation = rBody.rotation;
         }
+
+        //AUDIO
+        wallHit = FMODUnity.RuntimeManager.CreateInstance(wallShaftSound);
     }
 	
 	// Update is called once per frame
@@ -40,9 +50,13 @@ public class shaftPaddle : MonoBehaviour {
             ContactPoint2D contact;
             contact = col.contacts[0];
             Hit(col.collider, contact);
-
-
         }
+
+        if (col.gameObject.tag == "Wall")
+        {
+            wallHit.start();
+        }
+
     }
 
     void Hit(Collider2D col, ContactPoint2D contact)

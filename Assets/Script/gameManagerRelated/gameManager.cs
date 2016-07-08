@@ -7,6 +7,7 @@ using System.Linq;
 
 public class gameManager : MonoBehaviour {
 
+    gameManagerEvents gmEvent;
     public List<int> scores = new List<int>(new int[2]); //characters preloaded into game
     public List<playerEvents> playerInfo = new List<playerEvents>(new playerEvents[2]);
     public int firstTo = 5;
@@ -19,6 +20,7 @@ public class gameManager : MonoBehaviour {
 
     void Awake()
     {
+        gmEvent.GetComponent<gameManagerEvents>();
         gameEndObject.SetActive(false);
         scores.Add(0); //player1
         scores.Add(0); //player2
@@ -39,6 +41,7 @@ public class gameManager : MonoBehaviour {
 
     public void EndGame()
     {
+        gmEvent.EndGame();
         int winningPlayer = 0;
         int maxNumber = 0;
         for (int i = 0; i < scores.Count; i++)
