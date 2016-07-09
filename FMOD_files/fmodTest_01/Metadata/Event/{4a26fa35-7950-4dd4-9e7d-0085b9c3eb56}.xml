@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.07.00">
+<objects serializationModel="Studio.01.08.00">
     <object class="Event" id="{4a26fa35-7950-4dd4-9e7d-0085b9c3eb56}">
         <property name="name">
             <value>SprayParticle</value>

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.07.00">
+<objects serializationModel="Studio.01.08.00">
     <object class="AudioFile" id="{66f6bb64-1d38-4a88-872e-acb9cd301f93}">
+        <property name="assetPath">
+            <value>CC0_Goal_Siren.wav</value>
+        </property>
         <property name="frequencyInKHz">
             <value>44.0999985</value>
         </property>
@@ -10,10 +13,7 @@
         <property name="length">
             <value>8.4793424036281184</value>
         </property>
-        <property name="audioFilePath">
-            <value>$(AUDIO_BIN_DIR)/CC0_Goal_Siren {95f3f279-5e10-4625-b781-ddf71d24cca5}.wav</value>
-        </property>
-        <relationship name="container">
+        <relationship name="masterAssetFolder">
             <destination>{316d25a0-cbf4-4ed9-af81-756e45d863db}</destination>
         </relationship>
     </object>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.07.00">
+<objects serializationModel="Studio.01.08.00">
     <object class="Event" id="{7b172469-4597-407e-b15f-070ebb0eafda}">
         <property name="name">
             <value>WinSound</value>
@@ -176,7 +176,14 @@
         </property>
     </object>
     <object class="MixerBusFader" id="{5aaa8786-c7ef-4c14-97a1-3d49605e6fff}"/>
-    <object class="SpatialiserEffect" id="{0535b2ef-ad56-4110-9c07-3a5ee5ce7daf}"/>
+    <object class="SpatialiserEffect" id="{0535b2ef-ad56-4110-9c07-3a5ee5ce7daf}">
+        <property name="distanceRolloffType">
+            <value>4</value>
+        </property>
+        <property name="extentMode">
+            <value>2</value>
+        </property>
+    </object>
     <object class="MixerSend" id="{16d38ab7-993b-4395-b7be-470e5c4eb015}">
         <property name="inputFormat">
             <value>2</value>

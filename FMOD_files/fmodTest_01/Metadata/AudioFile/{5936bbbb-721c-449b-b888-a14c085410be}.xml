@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.07.00">
+<objects serializationModel="Studio.01.08.00">
     <object class="AudioFile" id="{5936bbbb-721c-449b-b888-a14c085410be}">
+        <property name="assetPath">
+            <value>CCA_ConfettiParticle.wav</value>
+        </property>
         <property name="frequencyInKHz">
             <value>48</value>
         </property>
@@ -10,10 +13,7 @@
         <property name="length">
             <value>1.4778958333333334</value>
         </property>
-        <property name="audioFilePath">
-            <value>$(AUDIO_BIN_DIR)/CCA_ConfettiParticle {9954d10b-4232-4eba-bd65-36081d07ef6b}.wav</value>
-        </property>
-        <relationship name="container">
+        <relationship name="masterAssetFolder">
             <destination>{316d25a0-cbf4-4ed9-af81-756e45d863db}</destination>
         </relationship>
     </object>

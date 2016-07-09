@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.07.00">
+<objects serializationModel="Studio.01.08.00">
     <object class="AudioFile" id="{ae23bb8a-c238-4039-842d-6e01590f645e}">
+        <property name="assetPath">
+            <value>CC0_Goal_Cheering.wav</value>
+        </property>
         <property name="frequencyInKHz">
             <value>48</value>
         </property>
@@ -10,10 +13,7 @@
         <property name="length">
             <value>5.1614166666666668</value>
         </property>
-        <property name="audioFilePath">
-            <value>$(AUDIO_BIN_DIR)/CC0_Goal_Cheering {4cc126da-89f9-4b73-af78-e3d35e621922}.wav</value>
-        </property>
-        <relationship name="container">
+        <relationship name="masterAssetFolder">
             <destination>{316d25a0-cbf4-4ed9-af81-756e45d863db}</destination>
         </relationship>
     </object>

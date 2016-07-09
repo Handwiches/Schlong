@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.01.07.00">
+<objects serializationModel="Studio.01.08.00">
     <object class="AudioFile" id="{36b3277a-c993-4e99-a824-15af350567aa}">
+        <property name="assetPath">
+            <value>CCA_FireworkParticle.wav</value>
+        </property>
         <property name="frequencyInKHz">
             <value>48</value>
         </property>
@@ -10,10 +13,7 @@
         <property name="length">
             <value>1.7578333333333334</value>
         </property>
-        <property name="audioFilePath">
-            <value>$(AUDIO_BIN_DIR)/CCA_FireworkParticle {83753f1e-5c61-4b3b-b476-0263a4d93ff4}.wav</value>
-        </property>
-        <relationship name="container">
+        <relationship name="masterAssetFolder">
             <destination>{316d25a0-cbf4-4ed9-af81-756e45d863db}</destination>
         </relationship>
     </object>
