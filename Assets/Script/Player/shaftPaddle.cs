@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class shaftPaddle : MonoBehaviour {
 
     //Sub-script of playerEvent and playerMovement

@@ -1,0 +1,137 @@
+fileFormatVersion: 2
+guid: 6a1eccfb27d2a1346938d79a95db4909
+timeCreated: 1468093030
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: speakerDick
+    21300002: speaker
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: speakerDick
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 815
+        width: 580
+        height: 204
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 102}
+        - {x: -285, y: 102}
+        - {x: -290, y: 89}
+        - {x: -290, y: -87}
+        - {x: -275, y: -102}
+        - {x: -37, y: -102}
+        - {x: 196, y: -80}
+        - {x: 196, y: 84}
+        - {x: 129, y: 90}
+      - - {x: 251, y: 81}
+        - {x: 251, y: -83}
+        - {x: 279, y: -83}
+        - {x: 290, y: -47}
+        - {x: 290, y: 57}
+        - {x: 271, y: 81}
+      - - {x: 232, y: 62}
+        - {x: 232, y: -64}
+        - {x: 251, y: -64}
+        - {x: 265, y: -48}
+        - {x: 265, y: 51}
+        - {x: 263, y: 62}
+      - - {x: 211, y: 42}
+        - {x: 211, y: -43}
+        - {x: 212, y: -44}
+        - {x: 227, y: -44}
+        - {x: 237, y: -34}
+        - {x: 237, y: 29}
+        - {x: 234, y: 42}
+    - name: speaker
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 641
+        width: 176
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 49, y: 80}
+        - {x: 49, y: -80}
+        - {x: 68, y: -80}
+        - {x: 71, y: -78}
+        - {x: 88, y: -60}
+        - {x: 88, y: 61}
+        - {x: 85, y: 80}
+      - - {x: -26, y: 80}
+        - {x: -88, y: 39}
+        - {x: -88, y: -35}
+        - {x: -22, y: -78}
+        - {x: -15, y: -78}
+        - {x: -6, y: -72}
+        - {x: -6, y: 77}
+        - {x: -12, y: 80}
+      - - {x: 30, y: 63}
+        - {x: 30, y: -63}
+        - {x: 49, y: -63}
+        - {x: 63, y: -47}
+        - {x: 63, y: 41}
+        - {x: 56, y: 63}
+      - - {x: 9, y: 43}
+        - {x: 9, y: -43}
+        - {x: 20, y: -43}
+        - {x: 28, y: -40}
+        - {x: 35, y: -21}
+        - {x: 35, y: 35}
+        - {x: 27, y: 43}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
