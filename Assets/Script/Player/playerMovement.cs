@@ -11,7 +11,7 @@ public class playerMovement : MonoBehaviour {
     public float speed = 5.0f;
     public float turnSpeed = 2.5f;
     public Transform animBase;
-    Rigidbody2D mainRigidBody;
+    public Rigidbody2D mainRigidBody;
     shaftPaddle animBasePaddle;
 
     float doubleTapCooler = 0.2f;
@@ -56,6 +56,7 @@ public class playerMovement : MonoBehaviour {
         }
         else
         {
+            print("working?" + mainRigidBody.angularVelocity);
             if (!player2)
                 mainRigidBody.angularVelocity = Input.GetAxis("Horizontal") * -turnSpeed;
             else
