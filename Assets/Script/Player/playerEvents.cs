@@ -17,6 +17,8 @@ public class playerEvents : MonoBehaviour {
     public List<SkinnedMeshRenderer> skinRenderers = new List<SkinnedMeshRenderer>(new SkinnedMeshRenderer[1]);
     public List<Material> playerMaterials = new List<Material>(new Material[3]);    //will randomly assign one to all the renderers
 
+    public Vector3 cumSpawnRotation = new Vector3(0, 0, 0);
+
     void Awake()
     {
         //Assign random material
@@ -43,8 +45,18 @@ public class playerEvents : MonoBehaviour {
     public void Goal()
     {
         //big cum
+
+        //cumSmallClone.parent = tipPosition; //so that the trail will follow the player
+        StartCoroutine(CoGoal());
+    }
+
+    public IEnumerator CoGoal()
+    {
         float lookDirection = tipPosition.rotation.z;
-        Transform cumSmallClone = Instantiate(cumParticleBig, tipPosition.position, Quaternion.Euler(new Vector3(-90, 0, lookDirection))) as Transform;
-        cumSmallClone.parent = tipPosition; //so that the trail will follow the player
+        Transform cumSmallClone = Instantiate(cumParticleBig, tipPosition.position, Quaternion.Euler(new Vector3(cumSpawnRotation.x, cumSpawnRotation.y, cumSpawnRotation.z))) as Transform;
+        cumSmallClone.GetComponent<fakeChild>().target = tipPosition;
+        //cumSmallClone.rotation = new Vector3 ()
+        yield return new WaitForSeconds(0.1f);
+        //cumSmallClone.parent = tipPosition; //so that the trail will follow the player
     }
 }

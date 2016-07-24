@@ -85,5 +85,6 @@ public class gameManagerEvents : MonoBehaviour
     public void EndGame()
     {
         winSFX.start();
+        music01.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
     }
 }

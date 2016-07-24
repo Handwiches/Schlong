@@ -9,6 +9,7 @@ public class gameManager : MonoBehaviour {
 
     gameManagerEvents gmEvent;
     public List<int> scores = new List<int>(new int[2]); //characters preloaded into game
+    public List<shaftPaddle> balls = new List<shaftPaddle>(new shaftPaddle[2]); //balls
     public List<playerEvents> playerInfo = new List<playerEvents>(new playerEvents[2]);
     public int firstTo = 5;
     public bool gameEnded = false;
@@ -41,7 +42,14 @@ public class gameManager : MonoBehaviour {
                 gmEvent.EndGame();
             }
         }
-	}
+
+        balls[0].initialScale = 1.0f + (scores[0] / 8.0f);
+        balls[1].initialScale = 1.0f + (scores[0] / 8.0f);
+        balls[2].initialScale = 1.0f + (scores[1] / 8.0f);
+        balls[3].initialScale = 1.0f + (scores[1] / 8.0f);
+
+
+    }
 
     public void EndGame()
     {

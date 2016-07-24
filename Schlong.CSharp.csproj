@@ -90,6 +90,7 @@
     <Compile Include="Assets\Script\scoreDisplay.cs" />
     <Compile Include="Assets\Script\small\AutoDestruct.cs" />
     <Compile Include="Assets\Script\small\cameraShake.cs" />
+    <Compile Include="Assets\Script\small\fakeChild.cs" />
     <Compile Include="Assets\Script\small\spawnButton.cs" />
     <Compile Include="Assets\Sources\LightningBolt.cs" />
   </ItemGroup>

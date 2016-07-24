@@ -16,6 +16,12 @@ public class shaftPaddle : MonoBehaviour {
     public playerEvents playerEvent;
     Transform tipPosition;
 
+    public bool scalable = false; //if true, use variables below
+    public float initialScale = 1.0f;
+    float currentScale = 1.0f;
+    public float scaleUpHits = 1.5f;
+    public float scaleSpeed = 1.5f;
+
     //AUDIO
     [FMODUnity.EventRef]
     public string wallShaftSound = "event:/Hits/ShaftWallHit";
@@ -24,6 +30,7 @@ public class shaftPaddle : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        //initialScale = transform.localScale.x;
 
         if (playerEvent != null)
         {
@@ -39,14 +46,33 @@ public class shaftPaddle : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	    
+        if (scalable)
+        {
+            float scaleLerp = Mathf.Lerp(currentScale, initialScale, Time.deltaTime * scaleSpeed);
+            transform.localScale = new Vector3(scaleLerp, scaleLerp, scaleLerp);
+            currentScale = Mathf.Lerp(currentScale, initialScale, Time.deltaTime * scaleSpeed);
+        }
 	}
+
+    public void ScaleUp()
+    {
+        scalable = false;
+        currentScale += scaleUpHits;
+        StartCoroutine(CoScaleUp());
+    }
+
+    public IEnumerator CoScaleUp()
+    {
+        yield return new WaitForSeconds(0.2f);
+        scalable = true;
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.tag == "Ball")
         {
-            //col.transform.SendMessage("resetPosition");
-            //Goal();
+            if (scalable)
+                ScaleUp();
 
             ContactPoint2D contact;
             contact = col.contacts[0];

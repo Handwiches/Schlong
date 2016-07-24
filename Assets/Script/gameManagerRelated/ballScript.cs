@@ -6,6 +6,10 @@ public class ballScript : MonoBehaviour {
 
     public Rigidbody2D rBody;
     public float startPower = 50.0f;
+    public TrailRenderer trail;
+    public float trailLength = 1.5f; //trail.time
+    public float trailSpeedLimit = 10.0f;//based on vMagnitude
+    float currentTrailLength = 0.0f;
 
     public float velocityMagnitude; //just for reading
     public float maxSpeed = 100.0f;
@@ -22,6 +26,7 @@ public class ballScript : MonoBehaviour {
     void Start () {
         //resetPosition();
         StartCoroutine(StartGame());
+        trail = transform.GetComponent<TrailRenderer>();
     }
 
     void FixedUpdate()
@@ -36,12 +41,27 @@ public class ballScript : MonoBehaviour {
             rBody.velocity = rBody.velocity.normalized * minSpeed;
         }
         velocityMagnitude = rBody.velocity.magnitude;
+
+        if (rBody.velocity.magnitude > trailSpeedLimit)
+        {
+            currentTrailLength = Mathf.Lerp(0.0f, trailLength, Time.deltaTime * 5.0f);
+            trail.time = currentTrailLength;
+        }
+        else
+        {
+            print("lower trail");
+            float nowLength = currentTrailLength;
+            currentTrailLength = Mathf.Lerp(nowLength, 0.0f, Time.deltaTime * 1.5f);
+            trail.time = currentTrailLength;
+            //trail.time = Mathf.Lerp(0.0f, trailLength, Time.deltaTime);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.localScale = new Vector3(Mathf.Lerp(currentScale, initialScale, Time.deltaTime * scaleSpeed), Mathf.Lerp(currentScale, initialScale, Time.deltaTime * scaleSpeed), 0.6f);
+        float scaleLerp = Mathf.Lerp(currentScale, initialScale, Time.deltaTime * scaleSpeed);
+        transform.localScale = new Vector3(scaleLerp, scaleLerp, scaleLerp);
         currentScale = Mathf.Lerp(currentScale, initialScale, Time.deltaTime * scaleSpeed);
     }
 
@@ -66,6 +86,8 @@ public class ballScript : MonoBehaviour {
 
     public void resetPosition()
     {
+        currentTrailLength = 0.0f;
+        trail.time = 0.0f;
         transform.position = new Vector3(0, 0, 0);
         rBody.velocity = new Vector2(0,0);
 

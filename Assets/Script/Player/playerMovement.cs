@@ -56,7 +56,7 @@ public class playerMovement : MonoBehaviour {
         }
         else
         {
-            print("working?" + mainRigidBody.angularVelocity);
+            //print("working?" + mainRigidBody.angularVelocity);
             if (!player2)
                 mainRigidBody.angularVelocity = Input.GetAxis("Horizontal") * -turnSpeed;
             else
